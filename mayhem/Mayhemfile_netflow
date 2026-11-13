@@ -1,0 +1,9 @@
+project: savantenvs/pmacct
+target: netflow
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/netflow/testsuite
+cmds:
+  - cmd: /mayhem/netflow
+    libfuzzer: true
+    timeout: 25
